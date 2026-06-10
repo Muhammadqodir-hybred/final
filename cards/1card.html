@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP.CO - One Life Graphic T-Shirt</title>
+    <link rel="stylesheet" href="./style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div id="overlay" class="overlay" onclick="closeAll()"></div>
+
+    <div id="cartSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Savat</h2>
+            <span class="material-symbols-outlined close-btn" onclick="toggleCart()">close</span>
+        </div>
+        <div id="cartItemsList" class="sidebar-content">
+            <p class="empty-msg">Savatingiz hozircha bo'sh.</p>
+        </div>
+    </div>
+
+    <div id="likeSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Saralanganlar</h2>
+            <span class="material-symbols-outlined close-btn" onclick="toggleLike()">close</span>
+        </div>
+        <div id="likeItemsList" class="sidebar-content">
+            <p class="empty-msg">Saralanganlar hozircha bo'sh.</p>
+        </div>
+    </div>
+
+
+
+    <nav>
+        <h1>SHOP.CO</h1>
+        <ul>
+            <li>Shop <span>▾</span></li>
+            <li>On Sale</li>
+            <li>New Arrivals</li>
+            <li>Brands</li>
+        </ul>
+        <div class="search-container">
+            <input type="search" placeholder="Search for products...">
+        </div>
+        <div class="nav-icons">
+            <span class="material-symbols-outlined" onclick="toggleCart()" style="cursor:pointer;">shopping_cart</span>
+            <span class="material-symbols-outlined" onclick="toggleLike()" style="cursor:pointer; color:red;">favorite</span>
+        </div>
+    </nav>
+
+    <div class="breadcrumbs">
+        Home <span> > </span> Shop <span> > </span> Men <span> > </span> <span class="current-bc">T-shirts</span>
+    </div>
+
+    <div class="product-container">
+        <div class="thumbnail-images">
+            <div class="thumb-box active-thumb"><img src="./img/21d6bcec533545a2b1e10e90b8059bc1bc97eab5.png" alt="thumb1"></div>
+            <div class="thumb-box"><img src="./img/21d6bcec533545a2b1e10e90b8059bc1bc97eab5.png" alt="thumb2"></div>
+            <div class="thumb-box"><img src="./img/52ce3b469d8d7ff6e33f95a574450e07218fc909.png" alt="thumb3"></div>
+        </div>
+
+        <div class="main-image-box">
+            <img src="./img/21d6bcec533545a2b1e10e90b8059bc1bc97eab5.png" alt="One Life Graphic T-Shirt">
+        </div>
+
+        <div class="product-details-info">
+            <h1 class="product-main-title">ONE LIFE GRAPHIC T-SHIRT</h1>
+            <div class="stars-row"><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> <span class="rating-text">4.5/5</span></div>
+            
+            <div class="price-row">
+                <span class="current-p">$260</span>
+                <span class="old-p">$300</span>
+                <span class="discount-badge">-40%</span>
+            </div>
+
+            <p class="product-description">
+                This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
+            </p>
+
+            <div class="options-divider"></div>
+
+            <div class="option-section">
+                <h3>Select Colors</h3>
+                <div class="crcd">
+                    <div class="crc"></div>
+                    <div class="crc2"></div>
+                    <div class="crc3"></div>
+                </div>
+            </div>
+
+            <div class="options-divider"></div>
+
+            <div class="option-section">
+                <h3>Choose Size</h3>
+                <div class="size-picker">
+                    <div class="size-box">Small</div>
+                    <div class="size-box">Medium</div>
+                    <div class="size-box active-size">Large</div>
+                    <div class="size-box">X-Large</div>
+                </div>
+            </div>
+
+            <div class="options-divider"></div>
+
+            <div class="actions-row">
+                <div class="quantity-counter">
+                    <button class="counter-btn"> - </button>
+                    <span class="counter-value">1</span>
+                    <button class="counter-btn">+</button>
+                </div>
+                <button class="add-to-cart-btn" onclick="addToCart('ONE LIFE GRAPHIC T-SHIRT')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs-container">
+        <div class="tab-item">Product Details</div>
+        <div class="tab-item active-tab">Rating & Reviews</div>
+        <div class="tab-item">FAQs</div>
+    </div>
+
+    <div class="reviews-section">
+        <div class="reviews-header">
+            <h2>All Reviews <span class="reviews-count">(451)</span></h2>
+            <div class="reviews-actions">
+                <button class="filter-btn"><span class="material-symbols-outlined">
+settings
+</span></button>
+                <select class="sort-select">
+                    <option>Latest</option>
+                </select>
+                <button class="write-review-btn">Write a Review</button>
+            </div>
+        </div>
+
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="card-top"><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> <span class="dots">•••</span></div>
+                <h3>Samantha D. <span class="material-symbols-outlined">
+check
+</span></h3>
+                <p>"I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."</p>
+                <div class="posted-date">Posted on August 14, 2023</div>
+            </div>
+
+            <div class="review-card">
+                <div class="card-top"><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> <span class="dots">•••</span></div>
+                <h3>Alex M. <span class="material-symbols-outlined">
+check
+</span></h3>
+                <p>"The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."</p>
+                <div class="posted-date">Posted on August 15, 2023</div>
+            </div>
+
+            <div class="review-card">
+                <div class="card-top"><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> <span class="dots">•••</span></div>
+                <h3>Ethan R. <span class="material-symbols-outlined">
+check
+</span></h3>
+                <p>"This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."</p>
+                <div class="posted-date">Posted on August 16, 2023</div>
+            </div>
+
+            <div class="review-card">
+                <div class="card-top"><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> <span class="dots">•••</span></div>
+                <h3>Olivia P. <span class="material-symbols-outlined">
+check
+</span></h3>
+                <p>"As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."</p>
+                <div class="posted-date">Posted on August 17, 2023</div>
+            </div>
+
+            <div class="review-card">
+                <div class="card-top"><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> <span class="dots">•••</span></div>
+                <h3>Liam K. <span class="material-symbols-outlined">
+check
+</span></h3>
+                <p>"This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."</p>
+                <div class="posted-date">Posted on August 18, 2023</div>
+            </div>
+
+            <div class="review-card">
+                <div class="card-top"><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> <span class="dots">•••</span></div>
+                <h3>Ava H. <span class="material-symbols-outlined">
+check
+</span></h3>
+                <p>"I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this t-shirt a conversation starter."</p>
+                <div class="posted-date">Posted on August 19, 2023</div>
+            </div>
+        </div>
+
+        <button class="load-more-btn">Load More Reviews</button>
+    </div>
+
+    <h1 class="like-title">YOU MIGHT ALSO LIKE</h1>
+    <div class="cards">
+        <div class="card">
+            <img src="https://frame-store.com/cdn/shop/files/WP26KSW008-NAMU_polo-front-packshot-image.jpg?v=1762829046&width=1000" alt="">
+            <h2>Polo with Contrast Trims</h2>
+            <span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> 4.0/5</span>
+            <div class="cc"><h2>$212</h2><span class="old-price">$242</span>
+                <span class="material-symbols-outlined" onclick="addToCart('Polo with Contrast Trims')" style="cursor:pointer; margin-left:auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Polo with Contrast Trims')" style="cursor:pointer; color:red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIxkAbgdg5OdI5koGidTGhETS8Omjcs_-9xOT9hWA87g&s=10" alt="">
+            <h2>Gradient Graphic T-shirt</h2>
+            <span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span>3.5/5</span>
+            <div class="cc"><h2>$145</h2>
+                <span class="material-symbols-outlined" onclick="addToCart('Gradient Graphic T-shirt')" style="cursor:pointer; margin-left:auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Gradient Graphic T-shirt')" style="cursor:pointer; color:red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/F09859s.jpg?im=Resize,width=750" alt="">
+            <h2>Polo with Tipping Details</h2>
+            <span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> 4.5/5</span>
+            <div class="cc"><h2>$180</h2>
+                <span class="material-symbols-outlined" onclick="addToCart('Polo with Tipping Details')" style="cursor:pointer; margin-left:auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Polo with Tipping Details')" style="cursor:pointer; color:red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6eNpRN7HPY7zKsWR1ZzjphVFjGSk3iEW4IYM1yg_Bnt1ETTHUmaqyGMpK&s=10" alt="">
+            <h2>Black Striped T-shirt</h2>
+            <span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span><span class="material-symbols-outlined">
+star
+</span> 5.0/5</span>
+            <div class="cc"><h2>$120</h2><span class="old-price">$150</span>
+                <span class="material-symbols-outlined" onclick="addToCart('Black Striped T-shirt')" style="cursor:pointer; margin-left:auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Black Striped T-shirt')" style="cursor:pointer; color:red;">favorite</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="podpiska">
+        <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        <div class="podpiska-forma">
+            <input type="email" placeholder="✉  Enter your email address">
+            <button>Subscribe to Newsletter</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <div class="f-col main-col">
+                <h2>SHOP.CO</h2>
+                <p>We have clothes that suit your style and which you're proud to wear. From women to men.</p>
+                <div class="social-icons"><img src="./img/1.png" alt=""><img src="./img/2.png" alt=""><img src="./img/3.png" alt=""><img src="./img/4.png" alt=""></div>
+            </div>
+            <div class="f-col">
+                <h3>COMPANY</h3>
+                <a href="#">About</a><a href="#">Features</a><a href="#">Works</a><a href="#">Career</a>
+            </div>
+            <div class="f-col">
+                <h3>HELP</h3>
+                <a href="#">Customer Support</a><a href="#">Delivery Details</a><a href="#">Terms & Conditions</a><a href="#">Privacy Policy</a>
+            </div>
+            <div class="f-col">
+                <h3>FAQ</h3>
+                <a href="#">Account</a><a href="#">Manage Deliveries</a><a href="#">Orders</a><a href="#">Payments</a>
+            </div>
+            <div class="f-col">
+                <h3>RESOURCES</h3>
+                <a href="#">Free eBooks</a><a href="#">Development Tutorial</a><a href="#">How to - Blog</a><a href="#">YouTube Playlist</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Shop.co © 2000-2023, All Rights Reserved</p>
+            <div class="payments">
+                <span>Visa</span><span>Mastercard</span><span>PayPal</span><span>Apple Pay</span><span>Google Pay</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

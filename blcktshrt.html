@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOP.CO - Homepage</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+
+    <div id="overlay" class="overlay" onclick="closeAll()"></div>
+
+    <div id="cartSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Savat</h2>
+            <span class="material-symbols-outlined close-btn" onclick="toggleCart()">close</span>
+        </div>
+        <div id="cartItemsList" class="sidebar-content">
+            <p class="empty-msg">Savatingiz hozircha bo'sh.</p>
+        </div>
+    </div>
+
+    <div id="likeSidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Saralanganlar</h2>
+            <span class="material-symbols-outlined close-btn" onclick="toggleLike()">close</span>
+        </div>
+        <div id="likeItemsList" class="sidebar-content">
+            <p class="empty-msg">Saralanganlar hozircha bo'sh.</p>
+        </div>
+    </div>
+
+    <nav>
+        <h1>SHOP.CO</h1>
+        <ul>
+            <li>Shop</li>
+            <li>On sale</li>
+            <li>New Arrivals</li>
+            <li>Brands</li>
+        </ul>
+        <input type="search" placeholder="Search for products...">
+        <div class="nav-icons">
+            <span class="material-symbols-outlined" onclick="toggleCart()" style="cursor: pointer;">shopping_cart</span>
+            <span class="material-symbols-outlined" onclick="toggleLike()" style="cursor: pointer;">favorite</span>
+        </div>
+    </nav>
+
+    <div class="bigdiv">
+        <div class="div1">
+            <h1>FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+            <h4>Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</h4>
+            <button>Shop Now</button>
+            <div class="stats">
+                <div class="stat-item"><h2>200+</h2><p>International Brands</p></div>
+                <div class="stat-item"><h2>2,000+</h2><p>High-Quality Products</p></div>
+                <div class="stat-item"><h2>30,000+</h2><p>Happy Customers</p></div>
+            </div>
+        </div>
+        <div class="div2">
+            <img src="./img/b26fea69ccfd8aa5825862cdb9604a4fb4930464 (1).jpg" alt="Couple Banner">
+        </div>
+    </div>
+
+    <div class="div3">
+        <h1>VERSACE</h1>
+        <h1>ZARA</h1>
+        <h1>GUCCI</h1>
+        <h1>PRADA</h1>
+        <h1>Calvin Klein</h1>
+    </div>
+
+    <h1 class="section-title">NEW ARRIVALS</h1>
+    <div class="cards">
+        <div class="card">
+           <a href="./cards/1card.html"> <img src="./img/d40da9a3a7234235e66d6695d9d7098fc3289872 (1).png" alt=""></a> 
+            <h2>T-shirt with Tape Details</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 4.5/5</div>
+            <div class="cc">
+                <h3>$120</h3>
+                <span class="material-symbols-outlined" onclick="addToCart('T-shirt with Tape Details')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('T-shirt with Tape Details')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+           <a href="./cards/1card.html"> <img src="./img/769b9d60ff941dde9bc0e54431b8d8fe3182f5e9.png" alt="Jeans"> </a> 
+            <h2>Skinny Fit Jeans</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 3.5/5</div>
+            <div class="cc">
+                <h3>$240</h3><span class="old-price">$260</span><span class="discount">-20%</span>
+                <span class="material-symbols-outlined" onclick="addToCart('Skinny Fit Jeans')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Skinny Fit Jeans')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./cards/1card.html"> <img src="./img/bbf411c25fc84f87eeac1062fbe47f49c192d4f2.png" alt="Shirt"> </a>  
+            <h2>Checkered Shirt</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 4.5/5</div>
+            <div class="cc">
+                <h3>$180</h3>
+                <span class="material-symbols-outlined" onclick="addToCart('Checkered Shirt')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Checkered Shirt')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+            <a href="./cards/1card.html"> <img src="./img/345742c27cc557f42cf1d489f7cc811856b90e9f.png" alt="Orange shirt"> </a>
+            <h2>Sleeve Striped T-shirt</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 4.5/5</div>
+            <div class="cc">
+                <h3>$130</h3><span class="old-price">$160</span><span class="discount">-30%</span>
+                <span class="material-symbols-outlined" onclick="addToCart('Sleeve Striped T-shirt')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Sleeve Striped T-shirt')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+    </div>
+    <button class="view">View All</button>
+
+    <h1 class="section-title">TOP SELLING</h1>
+    <div class="cards">
+        <div class="card">
+           <a href="./cards/1card.html"> <img src="./img/e01f5d3cd9029bd465a4c7158689ab1619693014.png" alt="Striped shirt"> </a> 
+            <h2>Vertical Striped Shirt</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 5.0/5</div>
+            <div class="cc">
+                <h3>$212</h3><span class="old-price">$232</span><span class="discount">-20%</span>
+                <span class="material-symbols-outlined" onclick="addToCart('Vertical Striped Shirt')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Vertical Striped Shirt')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+          <a href="./cards/1card.html"> <img src="./img/57234b01d5fcac5632cf6823570ca2d1d53d7d73.png" alt="Graphic t-shirt"> </a>  
+            <h2>Courage Graphic T-shirt</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 4.0/5</div>
+            <div class="cc">
+                <h3>$145</h3>
+                <span class="material-symbols-outlined" onclick="addToCart('Courage Graphic T-shirt')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Courage Graphic T-shirt')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+           <a href="./cards/1card.html"> <img src="./img/89515d714a66d9ca1401101dee4cc689f8bb5ad2.png" alt="Bermuda shorts"> </a> 
+            <h2>Loose Fit Bermuda Shorts</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 3.0/5</div>
+            <div class="cc">
+                <h3>$80</h3>
+                <span class="material-symbols-outlined" onclick="addToCart('Loose Fit Bermuda Shorts')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Loose Fit Bermuda Shorts')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+        <div class="card">
+           <a href="./cards/1card.html"> <img src="./img/f180c76808e2ff8a46be56aa933f031aed3abe75.png" alt="Faded jeans"> </a> 
+            <h2>Faded Skinny Jeans</h2>
+            <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span> 4.5/5</div>
+            <div class="cc">
+                <h3>$210</h3>
+                <span class="material-symbols-outlined" onclick="addToCart('Faded Skinny Jeans')" style="cursor: pointer; margin-left: auto;">add_shopping_cart</span>
+                <span class="material-symbols-outlined" onclick="addToLike('Faded Skinny Jeans')" style="cursor: pointer; color: red;">favorite</span>
+            </div>
+        </div>
+    </div>
+    <button class="view">View All</button>
+
+    <div class="dress-style-container">
+        <h1>BROWSE BY DRESS STYLE</h1>
+        <div class="style-grid">
+            <div class="style-box"><img src="./img/Frame 61.png" alt="Casual"></div>
+            <div class="style-box"><img src="./img/Frame 62.png" alt="Formal"></div>
+        </div>
+        <div class="style-grid-reverse">
+            <div class="style-box"><img src="./img/Frame 64.png" alt="Party"></div>
+            <div class="style-box"><img src="./img/Frame 63.png" alt="Gym"></div>
+        </div>
+    </div>
+
+    <div class="customers-section">
+        <div class="customers-header">
+            <h1>OUR HAPPY CUSTOMERS</h1>
+            <div class="arrows"><span class="material-symbols-outlined">arrow_back</span> <span class="material-symbols-outlined">arrow_right_alt</span></div>
+        </div>
+        <div class="customer-grid">
+            <div class="customer-card">
+                <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+                <h3>Sarah M. <span class="material-symbols-outlined">check_circle</span></h3>
+                <p>"I'm really impressed by the quality and style of the clothes I received. They are incredibly comfortable and perfectly fit my fashion sense."</p>
+            </div>
+            <div class="customer-card">
+                <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+                <h3>Alex K. <span class="material-symbols-outlined">check_circle</span></h3>
+                <p>"Finding clothes that match my style used to be a hassle, but SHOP.CO made it an absolute breeze. The selection is top-notch and delivery was incredibly fast!"</p>
+            </div>
+            <div class="customer-card">
+                <div class="stars"><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span><span class="material-symbols-outlined">star</span></div>
+                <h3>James L. <span class="material-symbols-outlined">check_circle</span></h3>
+                <p>"The customer support is absolutely fantastic, and the clothing texture is supreme. I highly recommend this shop to anyone seeking modern styles."</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="podpiska">
+        <h2>STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        <div class="podpiska-forma">
+            <input type="email" placeholder="Enter your email address">
+            <button>Subscribe to Newsletter</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <div class="f-col">
+                <h2>SHOP.CO</h2>
+                <p>We have clothes that suit your style and which you're proud to wear. From women to men.</p>
+            </div>
+            <div class="f-col"><h3>COMPANY</h3><a href="">About</a><a href="">Features</a><a href="">Works</a><a href="">Career</a></div>
+            <div class="f-col"><h3>HELP</h3><a href="">Customer Support</a><a href="">Delivery Details</a><a href="">Terms & Conditions</a><a href="">Privacy Policy</a></div>
+            <div class="f-col"><h3>FAQ</h3><a href="">Account</a><a href="">Manage Deliveries</a><a href="">Orders</a><a href="">Payments</a></div>
+            <div class="f-col"><h3>RESOURCES</h3><a href="">Free eBooks</a><a href="">Development Tutorial</a><a href="">How to - Blog</a><a href="">YouTube Playlist</a></div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
