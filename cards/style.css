@@ -44,7 +44,7 @@ nav input {
     background-color: #f0f0f0;
     padding-left: 20px;
     font-size: 14px;
-    outline: none;
+
 }
 
 .nav-icons {
@@ -88,7 +88,6 @@ nav input {
     width: 152px;
     height: 167px;
     border-radius: 20px;
-    overflow: hidden;
     background-color: #f0eeed;
     border: 1px solid transparent;
     cursor: pointer;
@@ -101,21 +100,20 @@ nav input {
 .thumb-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: 20px;
 }
 
 .main-image-box {
     width: 444px;
     height: 530px;
     border-radius: 20px;
-    overflow: hidden;
     background-color: #f0eeed;
 }
 
 .main-image-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: 20px;
 }
 
 .product-details-info {
@@ -154,7 +152,6 @@ nav input {
 .old-p {
     font-size: 26px;
     color: #999;
-    text-decoration: line-through;
 }
 
 .discount-badge {
@@ -169,7 +166,6 @@ nav input {
 .product-description {
     font-size: 16px;
     color: #666;
-    line-height: 1.6;
     margin-bottom: 24px;
 }
 
@@ -197,7 +193,6 @@ nav input {
     width: 37px;
     height: 37px;
     text-align: center;
-    line-height: 37px;
     color: white;
     cursor: pointer;
 }
@@ -353,7 +348,6 @@ nav input {
 
 .reviews-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
@@ -387,7 +381,6 @@ nav input {
 .review-card p {
     font-size: 15px;
     color: #666;
-    line-height: 1.6;
     margin: 0 0 24px 0;
 }
 
@@ -405,7 +398,6 @@ nav input {
     background-color: white;
     font-size: 16px;
     font-weight: bold;
-    margin: 36px auto 0 auto;
     cursor: pointer;
 }
 
@@ -435,7 +427,6 @@ nav input {
     width: 270px;
     height: 270px;
     border-radius: 20px;
-    object-fit: cover;
     background-color: #f0eeed;
 }
 
@@ -452,7 +443,6 @@ nav input {
 
 .old-price {
     color: #999;
-    text-decoration: line-through;
     font-size: 20px;
 }
 
@@ -479,15 +469,12 @@ nav input {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    z-index: 5;
 }
 
 .podpiska h2 {
     font-size: 40px;
     width: 600px;
     margin: 0;
-    font-weight: 900;
-    line-height: 1;
 }
 
 .podpiska-forma {
@@ -503,7 +490,6 @@ nav input {
     border: none;
     padding-left: 24px;
     font-size: 15px;
-    outline: none;
 }
 
 .podpiska-forma button {
@@ -552,14 +538,12 @@ footer {
     font-size: 16px;
     margin: 0;
     font-weight: bold;
-    letter-spacing: 2px;
 }
 
 .f-col p, .f-col a {
     font-size: 14px;
     color: #666;
     text-decoration: none;
-    line-height: 1.6;
     margin: 0;
 }
 
@@ -589,102 +573,6 @@ footer {
     font-weight: bold;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: white;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1240px;
-    height: 48px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-nav h1 {
-    font-size: 32px;
-    font-weight: bold;
-    margin: 0;
-}
-
-nav ul {
-    display: flex;
-    gap: 40px;
-    list-style: none;
-    font-size: 16px;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-}
-
-nav input {
-    width: 500px;
-    height: 44px;
-    border-radius: 60px;
-    border: none;
-    background-color: #f0f0f0;
-    padding-left: 45px;
-    font-size: 14px;
-}
-
-.nav-icons {
-    display: flex;
-    gap: 20px;
-    font-size: 22px;
-}
-
-.podpiska {
-    background-color: black;
-    color: white;
-    max-width: 1140px;
-    margin: 0 auto -80px auto;
-    padding: 40px 50px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 5;
-}
-
-.podpiska h2 {
-    font-size: 36px;
-    width: 550px;
-    margin: 0;
-    font-weight: bold;
-    line-height: 1.1;
-}
-
-.podpiska-forma {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.podpiska-forma input {
-    width: 320px;
-    height: 48px;
-    border-radius: 25px;
-    border: none;
-    padding-left: 20px;
-    font-size: 14px;
-}
-
-.podpiska-forma button {
-    width: 340px;
-    height: 48px;
-    border-radius: 25px;
-    border: none;
-    background-color: white;
-    color: black;
-    font-weight: bold;
-}
 
 .sidebar {
     position: fixed;
@@ -694,7 +582,6 @@ nav input {
     height: 100%;
     background-color: white;
     box-shadow: 5px 0 15px rgba(0,0,0,0.15);
-    z-index: 999;
     transition: left 0.3s ease;
     padding: 20px;
     display: flex;
@@ -721,13 +608,10 @@ nav input {
 .close-btn {
     cursor: pointer;
     font-size: 28px;
-    user-select: none;
 }
 
 .sidebar-content {
     margin-top: 20px;
-    overflow-y: auto;
-    flex-grow: 1;
 }
 
 .empty-msg {
@@ -743,9 +627,9 @@ nav input {
     font-weight: bold;
     color: #333;
 }
-/* ===== MEDIA QUERIES - 1card.html ===== */
 
-/* Tablet (768px - 1024px) */
+
+
 @media (max-width: 1024px) {
     nav input {
         width: 300px;
@@ -756,8 +640,6 @@ nav input {
         padding: 0 16px;
     }
     .thumbnail-images {
-        flex-direction: row;
-        order: 2;
         flex-wrap: wrap;
         gap: 10px;
     }
@@ -768,10 +650,8 @@ nav input {
     .main-image-box {
         width: 100%;
         max-width: 444px;
-        order: 1;
     }
     .product-details-info {
-        order: 3;
         width: 100%;
     }
     .reviews-grid {
@@ -804,7 +684,7 @@ nav input {
     }
 }
 
-/* Mobile (max 767px) */
+
 @media (max-width: 767px) {
     nav {
         flex-wrap: wrap;
@@ -818,7 +698,6 @@ nav input {
     }
     nav input {
         width: 100%;
-        order: 3;
     }
     nav h1 {
         font-size: 22px;
@@ -838,7 +717,6 @@ nav input {
         margin: 20px auto;
     }
     .thumbnail-images {
-        flex-direction: row;
         gap: 8px;
     }
     .thumb-box {
