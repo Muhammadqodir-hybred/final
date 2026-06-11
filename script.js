@@ -1,102 +1,84 @@
 let cartItems = [];
 let likeItems = [];
 
-function openOverlay() {
-    const overlay = document.getElementById("overlay");
-    if (overlay) overlay.classList.add("active");
-}
+const getElements = () => ({
+    overlay: document.getElementById("overlay"),
+    cartSidebar: document.getElementById("cartSidebar"),
+    likeSidebar: document.getElementById("likeSidebar"),
+    cartList: document.getElementById("cartItemsList"),
+    likeList: document.getElementById("likeItemsList")
+});
 
 function closeAll() {
-    document.getElementById("cartSidebar").classList.remove("active");
-    document.getElementById("likeSidebar").classList.remove("active");
-    const overlay = document.getElementById("overlay");
-    if (overlay) overlay.classList.remove("active");
+    const { cartSidebar, likeSidebar, overlay } = getElements();
+    cartSidebar?.classList.remove("active");
+    likeSidebar?.classList.remove("active");
+    overlay?.classList.remove("active");
 }
 
-function toggleCart() {
-    const cart = document.getElementById("cartSidebar");
-    const like = document.getElementById("likeSidebar");
-    const isOpen = cart.classList.contains("active");
-    like.classList.remove("active");
-    if (isOpen) {
-        cart.classList.remove("active");
-        const overlay = document.getElementById("overlay");
-        if (overlay) overlay.classList.remove("active");
+function toggleSidebar(targetType) {
+    const { cartSidebar, likeSidebar, overlay } = getElements();
+    
+    const target = targetType === 'cart' ? cartSidebar : likeSidebar;
+    const sibling = targetType === 'cart' ? likeSidebar : cartSidebar;
+    
+    sibling?.classList.remove("active");
+    
+    if (target?.classList.contains("active")) {
+        target.classList.remove("active");
+        overlay?.classList.remove("active");
     } else {
-        cart.classList.add("active");
-        openOverlay();
+        target?.classList.add("active");
+        overlay?.classList.add("active");
     }
 }
 
-function toggleLike() {
-    const like = document.getElementById("likeSidebar");
-    const cart = document.getElementById("cartSidebar");
-    const isOpen = like.classList.contains("active");
-    cart.classList.remove("active");
-    if (isOpen) {
-        like.classList.remove("active");
-        const overlay = document.getElementById("overlay");
-        if (overlay) overlay.classList.remove("active");
-    } else {
-        like.classList.add("active");
-        openOverlay();
-    }
-}
+const toggleCart = () => toggleSidebar('cart');
+const toggleLike = () => toggleSidebar('like');
 
-function renderCart() {
-    const listDiv = document.getElementById("cartItemsList");
-    if (!listDiv) return;
-    if (cartItems.length === 0) {
-        listDiv.innerHTML = '<p class="empty-msg">Savatingiz hozircha bo\'sh.</p>';
+function renderList(itemsArray, targetElement, emptyMessage) {
+    if (!targetElement) return;
+    
+    if (itemsArray.length === 0) {
+        targetElement.innerHTML = `<p class="empty-msg">${emptyMessage}</p>`;
         return;
     }
-    listDiv.innerHTML = "";
-    cartItems.forEach(item => {
+    
+    targetElement.innerHTML = "";
+    
+    itemsArray.forEach(item => {
         const div = document.createElement("div");
         div.className = "sidebar-item";
-        div.innerText = " " + item;
-        listDiv.appendChild(div);
+        div.textContent = item;
+        targetElement.appendChild(div);
     });
 }
 
-function renderLike() {
-    const listDiv = document.getElementById("likeItemsList");
-    if (!listDiv) return;
-    if (likeItems.length === 0) {
-        listDiv.innerHTML = '<p class="empty-msg">Saralanganlar hozircha bo\'sh.</p>';
-        return;
-    }
-    listDiv.innerHTML = "";
-    likeItems.forEach(item => {
-        const div = document.createElement("div");
-        div.className = "sidebar-item";
-        div.innerText = " " + item;
-        listDiv.appendChild(div);
-    });
-}
+const renderCart = () => renderList(cartItems, getElements().cartList, "Savatingiz hozircha bo'sh.");
+const renderLike = () => renderList(likeItems, getElements().likeList, "Saralanganlar hozircha bo'sh.");
 
 function addToCart(productName) {
-    cartItems.push(productName);
+    cartItems = [...cartItems, productName];
     renderCart();
-    const cart = document.getElementById("cartSidebar");
-    const like = document.getElementById("likeSidebar");
-    like.classList.remove("active");
-    cart.classList.add("active");
-    openOverlay();
+    
+    const { cartSidebar, likeSidebar, overlay } = getElements();
+    likeSidebar?.classList.remove("active");
+    cartSidebar?.classList.add("active");
+    overlay?.classList.add("active");
 }
 
 function addToLike(productName) {
     if (!likeItems.includes(productName)) {
-        likeItems.push(productName);
+        likeItems = [...likeItems, productName];
     }
     renderLike();
-    const like = document.getElementById("likeSidebar");
-    const cart = document.getElementById("cartSidebar");
-    cart.classList.remove("active");
-    like.classList.add("active");
-    openOverlay();
+    
+    const { cartSidebar, likeSidebar, overlay } = getElements();
+    cartSidebar?.classList.remove("active");
+    likeSidebar?.classList.add("active");
+    overlay?.classList.add("active");
 }
 
-document.addEventListener("keydown", function(e) {
+document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeAll();
 });
